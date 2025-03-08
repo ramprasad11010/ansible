@@ -1,0 +1,13 @@
+---
+- name: To install a package using varible
+  hosts: all
+  remote_user: root
+  tasks:
+    - name: Using yum to install the package.
+      yum:
+        name: '{{pack}}'
+        state: present
+    - name: Starting the service
+      ansible.builtin.service:
+        name: '{{pack}}'
+        state: started
