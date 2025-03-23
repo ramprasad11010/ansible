@@ -1,0 +1,7 @@
+---
+- host: all
+  become: true
+  task:
+    - name: To copy files from one remote server to other
+      
+  
