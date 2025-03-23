@@ -1,0 +1,5 @@
+This is a code for coping a file from local to remote servers using SSH password authentication. Run the below command for running the playbook.
+
+"ansible-playbook play.yml -i inventory.ini --ask-pass"
+
+Here using -i we are passing the inventory file.

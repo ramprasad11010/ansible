@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: To copy local files to remote servers
+      ansible.builtin.copy:
+        src: /home/thor/playbooks
+        dest: /root
+
