@@ -1,7 +1,10 @@
 ---
-- host: all
+- name: To copy remote files to local
+  hosts: all
   become: true
-  task:
+  tasks:
     - name: To copy files from one remote server to other
-      
-  
+      fetch:
+        src: /root/tmp/file.txt
+        dest: /home/thor/ansible/Play_to_copy_files_from_remote_servers/
+        flat: true
