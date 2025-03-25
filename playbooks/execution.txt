@@ -1,0 +1,4 @@
+This playbook is to install the httpd service, enable it and copy an HTML file to it.
+
+We have defined the inventory file in the local ansble config file. so we dont need to pass the inventory file.
+

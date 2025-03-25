@@ -5,3 +5,11 @@
       yum:
         name: httpd
         state: present
+    - name: Enabling httpd service
+      ansible.builtin.service:
+        name: httpd
+        state: started
+    - name: copy index file
+      copy:
+        src: index.html
+        dest: /var/www/html
