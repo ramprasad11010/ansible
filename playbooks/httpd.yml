@@ -5,6 +5,12 @@
       yum:
         name: httpd
         state: present
+#    - ansible.builtin.setup:
+#        filter: ansible_distribution
+    - name: To display OS name
+      debug:
+#        var: ansible_facts.distribution
+        msg: "OS is {{ ansible_facts.distribution }}"
     - name: Enabling httpd service
       ansible.builtin.service:
         name: httpd
